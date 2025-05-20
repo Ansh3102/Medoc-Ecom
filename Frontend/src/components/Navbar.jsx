@@ -13,14 +13,26 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light py-3 sticky-top">
-            <div className="container">
-                <NavLink className="navbar-brand fw-bold fs-4 px-2" to="/"> 
-                    {/* Your brand logo/text here */}
-                </NavLink>
-                <button className="navbar-toggler mx-2" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <div className="container-fluid">
+                <NavLink className="navbar-brand fw-bold fs-4" to="/">
+      <img
+        src="/assets/logo-nav (1).jpg"  // Correct path if using public folder
+        alt="Ecommerce Logo"
+        width="150"
+        height="50"
+        className="d-inline-block align-top"
+      />
+    </NavLink>
+               <button className="navbar-toggler" type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarSupportedContent"
+  aria-controls="navbarSupportedContent"
+  aria-expanded="false"
+  aria-label="Toggle navigation">
+  <span className="navbar-toggler-icon"></span>
+</button>
+
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav m-auto my-2 text-center">

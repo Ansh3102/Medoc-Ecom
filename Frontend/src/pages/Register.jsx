@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import { Footer, Navbar } from "../components";
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import toast from 'react-hot-toast';
+
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -34,7 +33,7 @@ const Register = () => {
 
   return (
     <>
-      <Navbar />
+   
       <div className="container my-3 py-3">
         <h1 className="text-center">Register</h1>
         <hr />
@@ -89,7 +88,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
