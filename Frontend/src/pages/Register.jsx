@@ -15,7 +15,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        'http://localhost:3001/api/register', // Note port 3001 for backend
+        `${process.env.REACT_APP_API_BASE_URL}/api/register` , // Note port 3001 for backend
         { name, email, password },
         {
           headers: {

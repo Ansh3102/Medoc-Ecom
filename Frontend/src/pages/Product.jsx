@@ -31,7 +31,7 @@ const Product = () => {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const productResponse = await axios.get(`http://localhost:3001/api/products/${id}`);
+        const productResponse = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/products/${id}`);
         const productData = productResponse.data.data || productResponse.data;
         
         if (!productData) {

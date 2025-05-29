@@ -24,7 +24,7 @@ const Products = () => {
     const getProducts = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('http://localhost:3001/api/products');
+        const response = await axios.get(`${process.env.REACT_APP_API_BASE_URL}/api/products`);
         const products = response.data.data || []; // Access nested data array
         
         setData(products);

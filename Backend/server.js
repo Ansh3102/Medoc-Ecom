@@ -16,7 +16,7 @@ const port = process.env.PORT || 3001; // Change from 3000 to 3001
 //const navigate = useNavigate(); 
 // Middleware
 app.use(cors({
-    origin: ['http://localhost:3000', 'http://localhost:3001'], // Both frontend and backend
+    origin: ['http://localhost:3000', 'http://localhost:3001','https://medoc-ecom.vercel.app'], // Both frontend and backend
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE']
   }));
