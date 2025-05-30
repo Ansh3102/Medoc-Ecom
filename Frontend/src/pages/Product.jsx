@@ -24,7 +24,7 @@ const Product = () => {
   const getImageUrl = (imagePath) => {
     if (!imagePath) return process.env.REACT_APP_API_BASE_URL + '/images/placeholder-product.jpg';
     if (imagePath.startsWith('http')) return imagePath;
-    return process.env.REACT_APP_API_BASE_URL + imagePath;
+    return `${process.env.REACT_APP_API_BASE_URL}${imagePath}`; 
   };
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const Product = () => {
         
         try {
           const similarResponse = await axios.get(
-            `http://localhost:3001/api/products?category=${productData.category}&limit=4`
+            `${process.env.REACT_APP_API_BASE_URL}/api/products?category=${productData.category}&limit=4`
           );
           const similarData = similarResponse.data.data || similarResponse.data;
           setSimilarProducts(

@@ -6,6 +6,8 @@ import { Product } from './Models/products.model.js'; // We'll create this model
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
+const __dirname = path.resolve();
+
 //import useNavigate from 'react-router-dom
 
 dotenv.config();
@@ -32,6 +34,8 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
+// ✅ Serve images from /images directory at /images route
+app.use('/images', express.static(path.join(__dirname, 'images')));
 // MongoDB Connection
 mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/Ecommerce_Users")
   .then(() => console.log("MongoDB connected"))
