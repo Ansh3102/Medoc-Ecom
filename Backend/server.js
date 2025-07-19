@@ -6,6 +6,7 @@ import { Product } from './Models/products.model.js'; // We'll create this model
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
+import path from 'path'
 const __dirname = path.resolve();
 
 //import useNavigate from 'react-router-dom
